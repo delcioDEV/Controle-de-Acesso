@@ -1,0 +1,25 @@
+class User(
+val id : String,
+val funcao : String,
+val contact : String,
+val conpany : String
+)
+
+class Device (
+val id : String,
+val name: String,
+val model : String,
+)
+
+class Entries (
+val tag : String,
+val timeStamp : String
+val accessCount : String
+)
+
+class Contact (
+val id : String,
+val phoneNumber : String,
+val address : String,
+val email : String,
+)
