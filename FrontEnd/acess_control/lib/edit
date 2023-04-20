@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+
+class EditBuildingScreen extends StatefulWidget {
+final String name;
+
+EditBuildingScreen({this.name});
+
+@override``
+_EditBuildingScreenState createState() => _EditBuildingScreenState();
+}
+
+class _EditBuildingScreenState extends State<EditBuildingScreen> {
+final _formKey = GlobalKey<FormState>();
+final TextEditingController _nameController = TextEditingController();
+
+@override
+void initState() {
+super.initState();
+_nameController.text = widget.name;
+}
+
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(
+title: Text('Edit Building'),
+),
+body: Padding(
+padding: EdgeInsets.all(20),
+child: Form(
+key: _formKey,
+child: Column(
+children: [
+TextFormField(
+controller: _nameController,
+decoration: InputDecoration(
+labelText: 'Building Name',
+),
+validator: (value) {
+if (value.isEmpty) {
+return 'Please enter a building name';
+}
+return null;
+},
+),
+SizedBox(height: 20),
+ElevatedButton(
+onPressed: () {
+if (_formKey.currentState.validate()) {
+// TODO: Update building details in database and navigate back to building details screen.
+}
+},
+child: Text('Save'),
+),
+],
+),
+),
+),
+);
+}
+}
+
+//Note that these code snippets are just a starting point and will need to be customized to fit the specific needs of your app. Additionally, you will need to implement the CRUD (Create, Read, Update, Delete) functionality for your database.
