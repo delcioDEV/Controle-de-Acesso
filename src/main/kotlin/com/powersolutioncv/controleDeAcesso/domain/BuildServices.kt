@@ -15,12 +15,12 @@ class BuildServices(
     private val assembler: BuildAssembler,
 ) {
     fun getSpecificBuild(owner: String): BuildOutput {
-        val buildExist = repository.findByOwner(owner).firstOrNull() ?: throw IllegalArgumentException("Build not found")
+        val buildExist = repository.findByname(owner).firstOrNull() ?: throw IllegalArgumentException("Build not found")
         return assembler.toModel(buildExist)
     }
 
     fun updateBuild(owner: String, buildInput: BuildInput): BuildOutput {
-        val build = repository.findByOwner(owner).firstOrNull() ?: throw IllegalArgumentException("Build not found")
+        val build = repository.findByname(owner).firstOrNull() ?: throw IllegalArgumentException("Build not found")
         build.owner = buildInput.owner ?: build.owner
         build.location = buildInput.location ?: build.location
         build.registerDate = buildInput.registerDate ?: build.registerDate

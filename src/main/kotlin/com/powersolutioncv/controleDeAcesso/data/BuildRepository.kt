@@ -5,5 +5,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface BuildRepository : JpaRepository<Build, Long> {
-    fun findByOwner(owner: String): MutableList<Build>
+    fun findByname(owner: String): MutableList<Build>
+
 }

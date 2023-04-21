@@ -1,9 +1,7 @@
 package com.powersolutioncv.controleDeAcesso.webapi
 
 import com.powersolutioncv.controleDeAcesso.data.Build
-import com.powersolutioncv.controleDeAcesso.domain.BuildController
 import com.powersolutioncv.controleDeAcesso.webapi.model.BuildOutput
-import org.springframework.hateoas.CollectionModel
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder
 import org.springframework.stereotype.Component
