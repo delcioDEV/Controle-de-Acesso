@@ -7,7 +7,8 @@ import java.time.LocalDate
 import java.time.LocalTime
 
 @Entity
- class Acesso (
+ class Acesso
+   (
     @Id
     @GeneratedValue
     val id: Long = 0L,

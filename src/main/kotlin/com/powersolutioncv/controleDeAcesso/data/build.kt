@@ -12,7 +12,7 @@ class Build (
     @GeneratedValue
     val id : Long= 0L,
     var location : String = "",
-    var buildName : String = "",
+    var name : String = "",
     var owner : String = "",
     var registerDate : LocalDate = LocalDate.now(),
     var registerTime : LocalTime = LocalTime.now(),

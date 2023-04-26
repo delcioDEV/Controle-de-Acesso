@@ -14,6 +14,7 @@ class BuildAssembler : RepresentationModelAssemblerSupport<Build, BuildOutput>(
         val output = BuildOutput(
             owner = build.owner,
             location = build.location,
+            buildName = build.name,
             registerDate = build.registerDate,
             registerTime = build.registerTime
         )
@@ -22,6 +23,7 @@ class BuildAssembler : RepresentationModelAssemblerSupport<Build, BuildOutput>(
             WebMvcLinkBuilder.linkTo(
                 WebMvcLinkBuilder.methodOn(BuildController::class.java)
                     .getSpecificBuild(build.owner)
+
             ).withSelfRel()
         )
 

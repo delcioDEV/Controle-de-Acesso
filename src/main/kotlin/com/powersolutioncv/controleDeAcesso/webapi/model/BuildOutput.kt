@@ -6,9 +6,10 @@ import java.time.LocalTime
 
 open class BuildOutput(
 
-        var owner: String,
-        var location: String,
-        var registerDate: LocalDate,
-        var registerTime: LocalTime
+    var owner: String,
+    var location: String,
+    var registerDate: LocalDate,
+    var registerTime: LocalTime,
+    var buildName: String
 
-    ) : RepresentationModel<BuildOutput>()
+) : RepresentationModel<BuildOutput>()
